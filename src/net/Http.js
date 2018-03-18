@@ -12,6 +12,7 @@
 
 var Http = {
     request: function(options) {
+        if (options.url === undefined) return;
         // Code borrowed from Coffee Script and extended:
         var xhr = new self.XMLHttpRequest();
         xhr.open((options.method || 'get').toUpperCase(), options.url,
